@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EngiCalc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- History Button -->
+<button class="history-btn" onclick="toggleHistory()">📜 History</button>
+
+<!-- History Panel -->
+<div class="history hidden" id="historyPanel">
+
+    <div class="history-header">
+        <h3>History</h3>
+
+        <div>
+            <button class="small-btn" onclick="clearHistory()">🗑</button>
+            <button class="small-btn" onclick="toggleHistory()">✖</button>
+        </div>
+    </div>
+
+    <ul id="historyList"></ul>
+
+</div>
+
+<div class="container">
+
+    <div class="calculator">
+
+        <h2>EngiCalc</h2>
+
+        <input type="text" id="display" readonly>
+
+        <div class="buttons">
+
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="backspace()">⌫</button>
+            <button onclick="addValue('(')">(</button>
+            <button onclick="addValue(')')">)</button>
+
+            <button onclick="addValue('sin(')">sin</button>
+            <button onclick="addValue('cos(')">cos</button>
+            <button onclick="addValue('tan(')">tan</button>
+            <button onclick="addValue('sqrt(')">√</button>
+
+            <button onclick="addValue('7')">7</button>
+            <button onclick="addValue('8')">8</button>
+            <button onclick="addValue('9')">9</button>
+            <button onclick="addValue('/')">/</button>
+
+            <button onclick="addValue('4')">4</button>
+            <button onclick="addValue('5')">5</button>
+            <button onclick="addValue('6')">6</button>
+            <button onclick="addValue('*')">*</button>
+
+            <button onclick="addValue('1')">1</button>
+            <button onclick="addValue('2')">2</button>
+            <button onclick="addValue('3')">3</button>
+            <button onclick="addValue('-')">-</button>
+
+            <button onclick="addValue('0')">0</button>
+            <button onclick="addValue('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="addValue('+')">+</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
